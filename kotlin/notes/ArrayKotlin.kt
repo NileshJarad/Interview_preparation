@@ -11,7 +11,16 @@ Here are some basic properties of arrays –
 4. Their size is fixed.
 
 
-Note:  In kotlin arrays are passed by reference
+Note:  In kotlin arrays are passed by value
+
+
+Everything in Java is passed by value. In case of an array (which is nothing but an Object), the array reference is passed by value (just like an object reference is passed by value).
+
+When you pass an array to other method, actually the reference to that array is copied.
+
+Any changes in the content of array through that reference will affect the original array.
+But changing the reference to point to a new array will not change the existing reference in original method.
+
 */
 
 fun main() {
