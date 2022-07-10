@@ -8,11 +8,21 @@ import java.util.Vector
  * In kotlin vector are passed by value.
  */
 fun main() {
-    val vector = Vector<String>()
+    val vector = Vector<String>(5)
 
     vector.addElement("1")
     vector.add("2")
     vector.addAll(listOf("4", "6", "8"))
+
+    print("Size of Vector is  ${vector.size}")
+    print("\nSize of Vector is  ${vector.capacity()}")
+
+    // As we are adding extra element in the vector it will run out of space and it will double it's
+    // size
+    vector.add("last")
+
+    print("Size of Vector is  ${vector.size}")
+    print("\nSize of Vector is  ${vector.capacity()}")
 
     printVecotr(vector)
 
