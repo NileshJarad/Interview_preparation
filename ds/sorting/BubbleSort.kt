@@ -50,12 +50,17 @@ fun main() {
  */
 fun bubbleSort(unSortedArray: Array<Int>) {
     for (i in 1..unSortedArray.size - 1) {
+        var swapped = false
         for (j in 0..unSortedArray.size - i - 1) {
             if (unSortedArray[j] > unSortedArray[j + 1]) {
+                swapped = true
                 var a = unSortedArray[j]
                 unSortedArray[j] = unSortedArray[j + 1]
                 unSortedArray[j + 1] = a
             }
+        }
+        if (swapped == false) {
+            return
         }
     }
 }
