@@ -34,7 +34,7 @@ fun main() {
 }
 
 fun printVecotr(arr: Vector<String>) {
-    print("\n In Print Array function\n")
+    print("\n In Print Vector function\n")
     for (i in arr.indices) {
         if (i == 0) {
             arr[i] = "Start"
