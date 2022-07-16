@@ -1,13 +1,14 @@
+import common.printArray
+
 fun main() {
     // Unsorted array
     var unSortedArray = arrayOf(9, 5, 3, 8, 2, 6)
     // print the un sorted array
 
+    unSortedArray.printArray()
     bubbleSort(unSortedArray)
-    print("Sorted array ")
-    for (i in unSortedArray.indices) {
-        print("\t ${unSortedArray[i]}")
-    }
+    print("\nSorted array ")
+    unSortedArray.printArray()
 }
 
 /**

@@ -37,7 +37,7 @@ fun main() {
 
     // using Array constructor
     // kotlin array value are default initialised to Unit if we don't provide initialization
-    val arrayUsingArrayConstructor = Array(4, { i -> i * 20 })
+    val arrayUsingArrayConstructor = Array(4) { i -> i * 20 }
 
     printArray(arrayUsingArrayConstructor)
     print("\n In Main \n")

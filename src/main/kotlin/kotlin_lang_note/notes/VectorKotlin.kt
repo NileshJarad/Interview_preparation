@@ -24,7 +24,7 @@ fun main() {
     print("Size of Vector is  ${vector.size}")
     print("\nSize of Vector is  ${vector.capacity()}")
 
-    printVecotr(vector)
+    printVector(vector)
 
     print("\n")
 
@@ -33,7 +33,7 @@ fun main() {
     }
 }
 
-fun printVecotr(arr: Vector<String>) {
+fun printVector(arr: Vector<String>) {
     print("\n In Print Vector function\n")
     for (i in arr.indices) {
         if (i == 0) {
