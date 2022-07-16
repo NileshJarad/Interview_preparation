@@ -14,7 +14,7 @@ Element should be sorted
 
 2^0 = 1
 
-                            Iterration
+                            Iteration
 
 N = N /2^0                  0
 
