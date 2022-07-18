@@ -23,9 +23,11 @@ package ds.bit_manipulation
  *  5) Shift left (<<)
  *          - Shifts bits to left by
  *          - Kotlin `shl`
+ *          - a << b will multiply (a * 2^b), effectively when do left shift the number it will multiply by 2 res to power number
  *  6) Shift right (>>)
  *          - Shifts bits to right by
  *          - Kotlin `shr`
+ *          - a >> b will divide (a / 2^b), effectively when do right shift the number it will divide by 2 res to power number
  *
  *  How to calculate the binary number for given number
  *
