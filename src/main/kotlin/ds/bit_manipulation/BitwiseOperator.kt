@@ -50,7 +50,8 @@ fun main() {
     val six = 6
     val seven = 7
 
-    print("Bitwise And of ($six , $seven) = ${six and seven}") // 6
+    print("Binary representation of $eight = ${eight.toUInt().toString(2)}")
+    print("\nBitwise And of ($six , $seven) = ${six and seven}") // 6
     print("\nBitwise Or of ($six , $eight) = ${six or eight}") // 14
     print("\nBitwise XOR of ($six , $eight) = ${six xor eight}") // 14 as xor gives 1 if both bits are different
     print("\nBitwise complement of $minus500 = ${minus500.inv()}") // 499
