@@ -5,3 +5,4 @@
 
 1. Can we optimise using sorting array?
 2. Can we optimise using hash table
+3. Will it contain negative numbers ?
