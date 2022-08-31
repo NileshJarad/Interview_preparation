@@ -1,12 +1,10 @@
 package blind_leetcode.string
 
-import blind_leetcode.array.FindPivotIndex
-
 
 fun main() {
 //    println("isIsomorphic  ${IsomorphicStrings().isIsomorphic("egg", "add")}") // true
 //    println("isIsomorphic  ${IsomorphicStrings().isIsomorphic("foo", "bar")}") // false
-//    println("isIsomorphic  ${IsomorphicStrings().isIsomorphic("s", "t")}") // false
+//    println("isIsomorphic  ${IsomorphicStrings().isIsomorphic("s", "t")}") // true
 //    println("isIsomorphic  ${IsomorphicStrings().isIsomorphic("ab", "ab")}") // true
 //    println("isIsomorphic  ${IsomorphicStrings().isIsomorphic("aaeaa", "uuxyy")}") // false
 //    println("isIsomorphic  ${IsomorphicStrings().isIsomorphic("paper", "title")}") // true
