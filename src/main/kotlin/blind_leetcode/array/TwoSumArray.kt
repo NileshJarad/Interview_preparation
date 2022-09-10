@@ -43,29 +43,22 @@ Follow-up: Can you come up with an algorithm that is less than O(n^2) time compl
 fun main() {
     val result = TwoSumArray().twoSumUsingHashMap(intArrayOf(-2, 2, 7, 11, 15), 9)
     result.printArray()
+    val result2 = TwoSumArray().twoSumUsingHashMap(intArrayOf(3, 2, 3), 6)
+    result2.printArray()
 }
 
 class TwoSumArray {
-    /**
-     * In this method we do sorting of array which takes O(N log N)
-     * Then we traverse array using the two index to find number which take O(N)
-     */
-    fun twoSumUsingSortArray(nums: IntArray, target: Int): Array<Int> {
-        return Array(2) { i -> 0 }
-    }
-
     fun twoSumUsingHashMap(nums: IntArray, target: Int): Array<Int> {
         val map: HashMap<Int, Int> = HashMap()
         val result = Array(2) { i -> 0 }
         for ((index, value) in nums.withIndex()) {
-            map[value] = index
             val diff = target - value
             if (map.contains(diff)) {
                 result[0] = map[diff]!!
                 result[1] = index
                 return result
             }
-
+            map[value] = index
         }
         return result
     }
