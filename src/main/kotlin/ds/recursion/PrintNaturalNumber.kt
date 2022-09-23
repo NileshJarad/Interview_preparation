@@ -1,8 +1,5 @@
 package ds.recursion
 
-import sun.jvm.hotspot.runtime.DeadlockDetector.print
-import java.sql.DriverManager.println
-
 
 fun main() {
     print("Print dec number from 10 : ")
