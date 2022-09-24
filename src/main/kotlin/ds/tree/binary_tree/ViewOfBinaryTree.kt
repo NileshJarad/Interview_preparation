@@ -13,19 +13,16 @@ fun main() {
     root.rightNode?.rightNode = BinaryTreeNode(6)
     root.rightNode?.leftNode?.leftNode = BinaryTreeNode(7)
     root.rightNode?.leftNode?.rightNode = BinaryTreeNode(8)
-    root.rightNode?.leftNode?.rightNode?.rightNode = BinaryTreeNode(9)
-    root.rightNode?.leftNode?.rightNode?.rightNode?.rightNode = BinaryTreeNode(10)
 
-//    root.levelOrder()
-    println()
-    root.preOrderTraversal()
+
 //    println()
-//    root.inOrderTraversal()
+//    root.preOrderTraversal()
+//    println()
+//    root.postOrderTraversal()
     println()
-    root.postOrderTraversal()
-
+    TopViewOfBinaryTree().topViewOfTree(root)
     println()
-    TopViewOfBinaryTree().topViewOfTree(root);
+    TopViewOfBinaryTree().bottomViewOfTree(root)
 }
 
 typealias  level = Int
@@ -54,8 +51,31 @@ class TopViewOfBinaryTree {
             }
         }
 
-        map.forEach { _, value ->
-            print("${value} -")
+        map.forEach { (_, value) ->
+            print("$value -")
+        }
+
+    }
+
+    fun bottomViewOfTree(root: BinaryTreeNode) {
+        val queue = LinkedList<Pair<BinaryTreeNode, level>>()
+        val map = TreeMap<level, value>()
+        queue.add(Pair(root, 0))
+        while (queue.isNotEmpty()) {
+            val (poppedNode, poppedLevel) = queue.pop()
+
+            map[poppedLevel] = poppedNode.data
+
+            if (poppedNode.leftNode != null) {
+                queue.add(Pair(poppedNode.leftNode!!, poppedLevel - 1))
+            }
+
+            if (poppedNode.rightNode != null) {
+                queue.add(Pair(poppedNode.rightNode!!, poppedLevel + 1))
+            }
+        }
+        map.forEach { (_, value) ->
+            print("$value -")
         }
 
     }
