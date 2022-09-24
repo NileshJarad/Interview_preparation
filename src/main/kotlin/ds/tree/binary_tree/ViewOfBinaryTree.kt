@@ -1,6 +1,7 @@
 package ds.tree.binary_tree
 
 import java.util.*
+import kotlin.collections.ArrayList
 
 
 fun main() {
@@ -23,6 +24,10 @@ fun main() {
     TopViewOfBinaryTree().topViewOfTree(root)
     println()
     TopViewOfBinaryTree().bottomViewOfTree(root)
+    println()
+    TopViewOfBinaryTree().rightSideView(root).forEach {
+        print("$it -")
+    }
 }
 
 typealias  level = Int
@@ -79,6 +84,26 @@ class TopViewOfBinaryTree {
         }
 
     }
+
+    fun rightSideView(root: BinaryTreeNode): List<Int> {
+        val result = ArrayList<Int>()
+        rightView(root, result, 0);
+        return result;
+    }
+
+    private fun rightView(curr: BinaryTreeNode?, result: ArrayList<Int>, currDepth: Int) {
+        if (curr == null) {
+            return
+        }
+        if (currDepth == result.size) {
+            result.add(curr.data)
+        }
+
+        rightView(curr.rightNode, result, currDepth + 1)
+        rightView(curr.leftNode, result, currDepth + 1)
+
+    }
+
 }
 
 /**
