@@ -32,4 +32,5 @@ _Infix functions must meet the following requirements:_
 2. They must have a single parameter. 
 3. The parameter must not accept variable number of arguments and must have no default value.
 
+
 ### Inline function
