@@ -1,4 +1,4 @@
-package blind_leetcode.string
+package practice.string
 
 
 fun main() {

@@ -1,5 +1,8 @@
 package ds.tree.binary_tree
 
+import java.util.Hashtable
+import java.util.Vector
+
 
 fun main() {
     // create binary tree
@@ -11,6 +14,9 @@ fun main() {
     root.rightNode?.rightNode = BinaryTreeNode(6)
     root.rightNode?.leftNode?.leftNode = BinaryTreeNode(7)
     root.rightNode?.leftNode?.rightNode = BinaryTreeNode(8)
+
+
+    val t = ArrayList<Int>()
 }
 
 class BinaryTreeExample {

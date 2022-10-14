@@ -1,7 +1,6 @@
-package blind_leetcode.array
+package practice.array
 
 import common.printArray
-import printArray
 
 
 /***

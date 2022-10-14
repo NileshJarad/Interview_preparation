@@ -14,3 +14,16 @@ fun IntArray.printArray() {
     }
 }
 
+
+fun Array<IntArray>.printArray() {
+    print("\n In Print Array function\n")
+    val row = this.size
+    val col = this[0].size
+    for (i in 0 until row) {
+        for (j in 0 until col) {
+            print("\t ${this[i][j]}")
+        }
+        println()
+    }
+}
+

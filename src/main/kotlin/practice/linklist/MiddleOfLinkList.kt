@@ -1,4 +1,4 @@
-package blind_leetcode.linklist
+package practice.linklist
 
 import common.LinkListUtils
 import common.ListNode

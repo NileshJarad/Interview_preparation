@@ -1,4 +1,4 @@
-package blind_leetcode.hashmap_table
+package practice.hashmap_table
 
 /****
  * Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.

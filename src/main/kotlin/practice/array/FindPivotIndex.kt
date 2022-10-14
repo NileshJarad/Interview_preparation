@@ -1,6 +1,4 @@
-package blind_leetcode.array
-
-import common.printArray
+package practice.array
 
 
 fun main() {
