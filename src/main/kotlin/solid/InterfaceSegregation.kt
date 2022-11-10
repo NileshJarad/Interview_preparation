@@ -1,0 +1,4 @@
+package solid
+
+class InterfaceSegregation {
+}
