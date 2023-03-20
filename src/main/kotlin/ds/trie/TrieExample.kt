@@ -18,18 +18,18 @@ fun main() {
 
 
 class Trie(
-    val data: Char = Char.MIN_VALUE, val hashMap: HashMap<Char, Trie> = HashMap(), var endOfWord: Boolean = false
+    val data: Char, val hashMap: HashMap<Char, Trie> = HashMap(), var endOfWord: Boolean = false
 )
 
 
 class TrieExample {
-    private val root = Trie()
+    private val root = Trie(Char.MIN_VALUE)
     fun insertWord(word: String) {
         var temp = root
         word.forEachIndexed { index: Int, _ ->
             val char = word[index]
             if (!temp.hashMap.containsKey(char)) {
-                temp.hashMap[char] = Trie()
+                temp.hashMap[char] = Trie(char)
             }
             temp.hashMap[char]?.let {
                 temp = it
