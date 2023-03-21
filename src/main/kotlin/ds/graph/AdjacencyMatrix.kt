@@ -1,11 +1,12 @@
 package ds.graph
 
+const val TOTAL_VERTEX_ADJACENCY_MATRIX = 5
 
 typealias GraphTypeAdjacencyMatrix = Array<ArrayList<Int>>
 
 fun main() {
-    val graph: Array<Array<Int>> = Array(TOTAL_VERTEX) {
-        Array(TOTAL_VERTEX) {
+    val graph: Array<Array<Int>> = Array(TOTAL_VERTEX_ADJACENCY_MATRIX) {
+        Array(TOTAL_VERTEX_ADJACENCY_MATRIX) {
             0
         }
     }
