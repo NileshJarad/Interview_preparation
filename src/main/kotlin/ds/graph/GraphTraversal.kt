@@ -24,9 +24,11 @@ fun main() {
         ArrayList<EdgeEntity>()
     }
     createAdjacencyList(graph)
-    bfsOfGraph(graph)
-    println()
-    recursiveBfsOfGraph(graph, LinkedList<Int>().apply { add(0) }, Array(TOTAL_VERTEX_ADJACENCY_LIST) { false })
+//    bfsOfGraph(graph)
+//    println()
+//    recursiveBfsOfGraph(graph, LinkedList<Int>().apply { add(0) }, Array(TOTAL_VERTEX_ADJACENCY_LIST) { false })
+//    println()
+    dfsGraph(graph, Array(TOTAL_VERTEX_ADJACENCY_LIST) { false }, 0)
 }
 
 fun bfsOfGraph(graph: GraphTypeAdjacencyList) {
@@ -58,4 +60,16 @@ fun recursiveBfsOfGraph(graph: GraphTypeAdjacencyList, queue: LinkedList<Int>, v
         }
     }
     recursiveBfsOfGraph(graph, queue, visited)
+}
+
+
+fun dfsGraph(graph: GraphTypeAdjacencyList, visited: Array<Boolean>, current: Int) {
+    print("$current ")
+    visited[current] = true
+
+    graph[current].forEachIndexed { index, value ->
+      if(!visited[value.dest]){
+          dfsGraph(graph, visited, value.dest)
+      }
+    }
 }
