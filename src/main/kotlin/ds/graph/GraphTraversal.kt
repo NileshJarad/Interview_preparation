@@ -14,6 +14,9 @@ import java.util.Queue
  *      - visit  neighbours of current node
  *
  * DFS (Depth first search)
+ *  - Keep going to first neighbour and it's neighbours recursively
+ *  - Then go to the first neighbour
+ *
  */
 
 fun main() {
@@ -22,15 +25,17 @@ fun main() {
     }
     createAdjacencyList(graph)
     bfsOfGraph(graph)
+    println()
+    recursiveBfsOfGraph(graph, LinkedList<Int>().apply { add(0) }, Array(TOTAL_VERTEX_ADJACENCY_LIST) { false })
 }
 
 fun bfsOfGraph(graph: GraphTypeAdjacencyList) {
     val queue: Queue<Int> = LinkedList<Int>()
     val visited: Array<Boolean> = Array(TOTAL_VERTEX_ADJACENCY_LIST) { false }
     queue.add(0)
-    while (queue.isNotEmpty()){
-        val curr = queue.remove()
-        if(!visited[curr]){
+    while (queue.isNotEmpty()) {
+        val curr = queue.poll()
+        if (!visited[curr]) {
             print("$curr ")
             visited[curr] = true
             graph[curr].forEach {
@@ -38,4 +43,19 @@ fun bfsOfGraph(graph: GraphTypeAdjacencyList) {
             }
         }
     }
+}
+
+fun recursiveBfsOfGraph(graph: GraphTypeAdjacencyList, queue: LinkedList<Int>, visited: Array<Boolean>) {
+    if (queue.isEmpty()) {
+        return
+    }
+    val curr = queue.poll()
+    if (!visited[curr]) {
+        print("$curr ")
+        visited[curr] = true
+        graph[curr].forEach {
+            queue.add(it.dest)
+        }
+    }
+    recursiveBfsOfGraph(graph, queue, visited)
 }

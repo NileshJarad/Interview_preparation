@@ -24,9 +24,10 @@ fun printNeighboursOf(vertex: Int, graph: GraphTypeAdjacencyList) {
 
 fun createAdjacencyList(graph: GraphTypeAdjacencyList) {
 
-    // edges of 0  = {1, 2}
+    // edges of 0  = {1, 2 ,6}
     graph[0].add(EdgeEntity(0, 1))
     graph[0].add(EdgeEntity(0, 2))
+    graph[0].add(EdgeEntity(0, 6))
 
     // edges of 1  = {3}
     graph[1].add(EdgeEntity(1, 0))
